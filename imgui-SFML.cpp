@@ -204,8 +204,13 @@ void Init(sf::Window& window, const sf::Vector2f& displaySize, bool loadDefaultF
         sizeof(ImTextureID));  // ImTextureID is not large enough to fit GLuint.
 #endif
 
+    IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
+
+    // tell ImGui that we want to use docking and viewports
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
 
     // tell ImGui which features we support
     io.BackendFlags |= ImGuiBackendFlags_HasGamepad;
