@@ -1,6 +1,8 @@
 #ifndef IMGUI_SFML_H
 #define IMGUI_SFML_H
 
+#define IMGUI_USER_CONFIG "imconfig-SFML.h"
+
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/Color.hpp>
